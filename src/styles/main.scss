@@ -1,0 +1,51 @@
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+}
+
+#jquery-content {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+#react-root {
+  background-color: #e8f4fc;
+  padding: 20px;
+  border-radius: 5px;
+
+  h2 {
+    color: $secondary-color;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
