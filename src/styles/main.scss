@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -15,7 +15,8 @@ h1 {
   text-align: center;
 }
 
-#jquery-content {
+#jquery-content,
+#react-root {
   background-color: #f1f1f1;
   padding: 20px;
   margin-bottom: 20px;
@@ -26,26 +27,32 @@ h1 {
   }
 }
 
-#react-root {
-  background-color: #e8f4fc;
-  padding: 20px;
+#jquery-graph,
+#react-root > div > div {
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  margin-top: 20px;
+}
 
-  h2 {
-    color: $secondary-color;
+.bar {
+  fill: $primary-color;
+}
+
+button {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
   }
+}
 
-  button {
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
-    }
-  }
+#datepicker {
+  margin-top: 20px;
 }

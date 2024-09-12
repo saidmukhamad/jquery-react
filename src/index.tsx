@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { useSyncExternalStore } from "react";
+import ReactGraph from "./widgets/react-graph";
 import $ from "jquery";
 
 declare global {
@@ -40,6 +41,8 @@ const App: React.FC = () => {
       <h2>React Content</h2>
       <p>Message from jQuery: {globalMessage}</p>
       <button onClick={() => $("#jquery-content").css("color", "red")}>Change jQuery content color</button>
+      <div id="datepicker"></div>
+      <ReactGraph />
     </div>
   );
 };

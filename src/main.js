@@ -1,4 +1,6 @@
 import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
+import { initializeJQueryGraph } from "./widgets/jquery-graph";
 
 // Create a simple store
 const createStore = (initialState) => {
@@ -30,6 +32,12 @@ window.jQueryStore = createStore({
 $(document).ready(function () {
   $("#jquery-content").html("<p>This content was added using jQuery!</p>");
   $("#jquery-content").addClass("jquery-section");
+
+  // Initialize jQuery UI datepicker
+  $("#datepicker").datepicker();
+
+  // Initialize jQuery graph
+  initializeJQueryGraph();
 
   // Update our store
   window.jQueryStore.setState({
